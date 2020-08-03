@@ -1,0 +1,22 @@
+{
+  "name": "lodash-demos",
+  "version": "1.0.0",
+  "description": "这是一个学习lodash的仓库，包括demo和详解。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaodengping/lodash-demos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhaodengping/lodash-demos/issues"
+  },
+  "homepage": "https://github.com/zhaodengping/lodash-demos#readme",
+  "dependencies": {
+    "lodash": "^4.17.19"
+  }
+}
