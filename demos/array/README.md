@@ -58,3 +58,34 @@ _.difference(array,array2)
 
 上面的代码结果为`[1,3]`，是基于array，寻找不相同的项。
 
+### differenceBy
+
+作用跟上面的`difference`一致，但是加了一个参数，让数组的每一项都能按照某一个标准去执行，然后再进行比对，对元素进行迭代。
+
+形如：`_.differenceBy(array,array1,array2...,iteratee)`
+
+```
+let array=[1.2,2.2]
+let array2=[2.1,2.3]
+
+_.differenceBy(array,array2,Math.floor)
+```
+
+上面的代码结果为`[1.2]`，因为`Math.floor`会使得数组的每项变成`[1,2],[2,2]`，再进行比较时，自然只剩下`[1]`,对应的便是`[1.2]`
+
+### differenceWith 
+
+作用跟上面的`difference`一致，但是加了一个参数，遍历每个数组，按照某个比较器进行比较。
+
+形如：`_.differenceBy(array,array1,array2...,comparator)`
+
+```
+const array=[{obj1:1},{obj2:2}]
+const array2=[{obj2:2}]
+
+_.differenceWith(array,array2,_.isEqual)
+```
+
+上面代码结果为`[{obj1:1}]`，其中`_.isEqual`是那个比较器
+
+
